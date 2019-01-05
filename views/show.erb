@@ -7,7 +7,19 @@
     <title>Fridge Full of CRUD</title>
 </head>
 <body>
-    <h1> <%= food.name %> </h1>
+    <h1> <%= food.name %> Food Facts </h1>
+    <a href="/foods/<%= food.id%>/edit">Edit <%= food.name %></a>
+    <ul>
+        <li><%= food.description %></li>
+        <li><%= food.calorie_count %></li>
+        <li><%= food.gluten_free %></li>
+        <li><%= food.deliciousness_factor %></li>
+    </ul>
+
+    <form method="POST" action="/foods/<%= food.id %>">
+        <input type="hidden" name="_method" value="DELETE"/>
+        <input type="submit" value="Delete Food">
+    </form>
     
 </body>
 </html>

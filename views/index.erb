@@ -7,7 +7,7 @@
     <title>Fridge Full of CRUD</title>
 </head>
 <body>
-    <h1> "What's in YOUR fridge?" </h1>
+    <h1> What's in YOUR fridge? </h1>
     
     <ul>
         <% foods.each do |food| %>
@@ -16,6 +16,7 @@
     </ul>
 
     <! --- FORM TO ADD FOOD -->
+    <h3> Add food to your fridge: </h3>
     <form method="POST" action="/foods">    
         <input type="text" name="name" placeholder="Pizza">
         <input type="text" name="description" placeholder="Triangle slices of cheesiness">

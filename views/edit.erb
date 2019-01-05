@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit your Food</title>
+</head>
+<body>
+    <h1> Edit your food: </h1>
+
+    <! --- FORM TO EDIT FOOD -->
+    <h3> Edit the food in your fridge: </h3>
+    <form method="POST" action="/foods/<%= food.id %>"> 
+        <input type="hidden" name="_method" value="PUT">
+        <input type="text" name="name" value="<%= food.name %>">
+        <input type="text" name="description" value ="<%= food.description %>">
+        <input type="integer" name="calorie_count" value ="<%= food.calorie_count %>">
+        <input type="text" name="gluten_free" value ="<%= food.gluten_free %>">
+        <input type="text" name="deliciousness_factor" value = "<%= food.deliciousness_factor %>">
+        <input type="submit" value="Edit Food">
+    </form>
+
+ 
+</body>
+</html>
