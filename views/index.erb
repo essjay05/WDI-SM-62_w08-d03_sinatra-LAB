@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fridge Full of CRUD</title>
+</head>
+<body>
+    <h1> "What's in YOUR fridge?" </h1>
+    
+    <ul>
+        <% foods.each do |food| %>
+            <li> <a href="/foods/<%= food.id %>"> <%= food.name %> </a> </li>
+        <% end %>
+    </ul>
+
+    <! --- FORM TO ADD FOOD -->
+    <form method="POST" action="/foods">    
+        <input type="text" name="name" placeholder="Pizza">
+        <input type="text" name="description" placeholder="Triangle slices of cheesiness">
+        <input type="integer" name="calorie_count" placeholder="How many calories?">
+        <input type="text" name="gluten_free" placeholder="Gluten Free? True/False">
+        <input type="text" name="deliciousness_factor" placeholder="1...no good to 5... YUMMY!">
+        <input type="submit" value="Store in Fridge">
+    </form>
+
+ 
+</body>
+</html>
